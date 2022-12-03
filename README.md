@@ -10,4 +10,7 @@ Follow link below to configure.
 - [Documentation: firebase_docs](https://firebase.flutter.dev/docs/dynamic-links/receive/)
 
 Debugging Dynamic Links.
-example.page.link/suffix?d=1
+
+```example.page.link/suffix?d=1```
+
+<img src="https://firebase.google.com/static/docs/dynamic-links/images/preview-page.png"/>
