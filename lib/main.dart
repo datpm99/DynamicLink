@@ -1,6 +1,30 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> initialDynamicLink() async {
+  final initialLink = await FirebaseDynamicLinks.instance.getInitialLink();
+
+  //Terminated State (app kill).
+  if (initialLink != null) {
+    final Uri deepLink = initialLink.link;
+    debugPrint("deepLink: $deepLink");
+  }
+
+  //Background / Foreground State.
+  FirebaseDynamicLinks.instance.onLink.listen((dynamicLinkData) {
+    final Uri deepLink = dynamicLinkData.link;
+    debugPrint("deepLink: $deepLink");
+  }).onError((error) {
+    debugPrint('dynamicLink error: ${error.message}');
+  });
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await initialDynamicLink();
+
   runApp(const MyApp());
 }
 

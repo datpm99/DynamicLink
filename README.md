@@ -1,16 +1,13 @@
-# dynamic_link
+# Dynamic link
 
-A new Flutter project.
+Firebase dynamic link
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow link below to configure.
 
-A few resources to get you started if this is your first Flutter project:
+- [Library: firebase_dynamic_links](https://pub.dev/packages/firebase_dynamic_links)
+- [Documentation: firebase_docs](https://firebase.flutter.dev/docs/dynamic-links/receive/)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Debugging Dynamic Links.
+example.page.link/suffix?d=1
